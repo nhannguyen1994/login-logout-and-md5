@@ -1,0 +1,20 @@
+
+{% block head %}
+<link href="/css/style.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label>username:</label>
+            <input class="form-control" type="text" name="username" placeholder="username" /></br>
+        </div>
+        </br>
+        <div class="form-group">
+            <label>password:</label>
+            <input class="form-control" type="password"  name="password" placeholder="password"/></br>
+        </div>
+        </br>
+        <button class="btn btn-default" type="submit">Log in</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,29 @@
+
+{% block content %}
+    <h1> Register</h1>
+    <ul class="list-group">
+        {% if errors %}
+            {% for error in errors %}
+                <li class="list-group-item list-group-item-danger">{{ error.msg }}</li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+
+    <form method="post" action="/register">
+        <div class="form-group">
+            <div class="form-group">
+                <label>username:</label>
+                <input class="form-control" type="text" name="username" placeholder="Enter name" />
+            </div>
+            </br>
+            <div class="form-group">
+                <label>password:</label>
+                <input class="form-control" type="password" name="password" placeholder="Enter password"/>
+            </div>
+            </br>
+
+            </br>
+            <button class="btn btn-default pull-right" type="submit">Register</button>
+        </div>
+    </form>
+{% endblock  %}
